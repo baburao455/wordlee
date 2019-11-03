@@ -1,0 +1,21 @@
+<form class="form-inline">
+    <input class="form-control" name="searchInput" placeholder="Search" #searchInput="ngModel" [(ngModel)]="searchText" style="width: 80%;">
+    <button class="btn btn-outline-primary" (click)="searchText=''">X</button>
+</form>
+<table class="table table-sm">
+    <thead>
+        <th>word</th>
+    </thead>
+    <ng-container *ngFor="let words of wordArray">
+        <tr class="table-dark" *ngIf="filterCondition(words)">
+            <td>{{words.word}}</td>
+            <td>
+                <button class="btn btn-outline-info" (click)=wordService.populateForm(words)>Edit</button>
+                <button class="btn btn-outline-info" (click)=onDelete(words.$key)>Delete</button>
+            </td>
+        </tr>
+    </ng-container>
+</table>
+<div class="alert alert-danger" *ngIf="showDeletedMessage">
+    Deleted successfully ...
+</div>
