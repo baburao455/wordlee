@@ -7,7 +7,7 @@ import {WordService} from '../shared/word.service';
 })
 export class WordListComponent implements OnInit {
 
-  constructor(private wordService: WordService) { }
+  constructor(public wordService: WordService) { }
   wordArray = [];
   showDeletedMessage : boolean;
   searchText = "";

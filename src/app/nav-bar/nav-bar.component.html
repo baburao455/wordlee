@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+          Home
+        </a>
+      
+        <button class="navbar-toggler" type="button"
+                (click)="toggleNavbar()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+      
+        <div class="collapse navbar-collapse"
+             [ngClass]="{ 'show': navbarOpen }">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+              <a class="nav-link" routerLink="/wordSearch" routerLinkActive="active">Word Search</a>
+            </li>
+      
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+              <a class="nav-link" routerLink="/randomWord" routerLinkActive="active">Random Word</a>
+            </li>
+
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                <a class="nav-link" routerLink="/wordOfTheDay" routerLinkActive="active">Word of the Day</a>
+              </li>
+
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                  <a class="nav-link" routerLink="/wordPuzzle" routerLinkActive="active">Word puzzle</a>
+              </li>
+          </ul>
+        </div>
+      </nav>

@@ -1,19 +1,25 @@
+<app-nav-bar></app-nav-bar>
 <div class="row">
     <div class="col-md-5">
-        <form [formGroup]=this.wordService.form (ngSubmit)=onSubmit()>
+        <form [formGroup]=this.wordService.form (ngSubmit)=keySubmit()>
             <input type="hidden" formContorlName="$key">
             <div class="form-group">
-                <label>Word</label>
+                <label>Type the word you Seek</label>
                 <input formControlName="word" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.word.errors}">
                 <div class="invalid-feedback" *ngIf="submitted && formControls.word.errors">This field is required.</div>
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Submit">
+                <input type="submit" class="button btn btn-primary" value="Submit">
+                <!-- <button class="btn btn-primary"><a class="fontButton nav-link" routerLink="/" routerLinkActive="active">back</a></button> -->
+                <button class="btn btn-white"><a class="fontButton nav-link" routerLink="/" routerLinkActive="active"><img border="0" alt="back" src="../../assets/back-button.jpg" width="35" height="35"></a></button>
             </div>
         </form>
         <div class="alert alert-info" *ngIf="showSuccessMessage">
             Submitted Successfully...
         </div>
+        <div class="alert alert-info" *ngIf="webRes">
+            {{inputWord}}  =
+            {{webRes[0].shortdef}}
+        </div>
     </div>
-    <div class="col-md-7"></div>
 </div>

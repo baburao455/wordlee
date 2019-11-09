@@ -8,7 +8,7 @@ import {WordService} from '../shared/word.service';
 })
 export class RandomWordComponent implements OnInit {
 
-  constructor(private wordService : WordService) { }
+  constructor(public wordService : WordService) { }
 
   ngOnInit() {
   }

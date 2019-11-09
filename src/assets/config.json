@@ -1,0 +1,3 @@
+{
+    "wordNikRandomUrl": "https://api.wordnik.com/v4/words.json/randomWord?hasDictionaryDef=true&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&api_key=0d0b4a5ca13a59b563002073dc90c794a2efad5e3b00ece89"
+  }
